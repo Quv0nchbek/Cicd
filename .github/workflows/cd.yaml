@@ -1,0 +1,22 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+
+
+     steps:
+      - name: Serverga ulanish va uni deploy qilish
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: linuxserver.io
+          key: ${{ secrets.KEY }}
+          port: 22
+          script:
+          cd /home/ci-cd/Cicd/
+          git pull
+          npm install
+          pm2 restart 0
+      
