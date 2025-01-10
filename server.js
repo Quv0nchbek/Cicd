@@ -8,7 +8,8 @@ server.get("/", (req, res) => {
     res.send({
         ok: true,
         code: 200,
-        message: "salomm "
+        message: "salomm ",
+        masege: "salom"
 
     })
 })
