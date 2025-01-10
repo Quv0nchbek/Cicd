@@ -15,6 +15,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
-            cd .. cd /home/ci-cd/Cicd/
+            cd .. 
+            cd /home/ci-cd/Cicd/
             git pull
             npm install
