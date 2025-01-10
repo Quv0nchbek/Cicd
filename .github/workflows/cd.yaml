@@ -19,3 +19,4 @@ jobs:
             cd /home/ci-cd/Cicd/
             git pull
             npm install
+            pm2 restart birinchi
