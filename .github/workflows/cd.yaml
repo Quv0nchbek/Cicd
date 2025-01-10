@@ -6,8 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-
-     steps:
+    steps:
       - name: Serverga ulanish va uni deploy qilish
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -15,9 +14,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: 22
-          script:
+          script: |
             cd /home/ci-cd/Cicd/
             git pull
             npm install
-            pm2 restart birinchi
-      
